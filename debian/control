@@ -1,0 +1,3 @@
+Package: python-ooni-backend
+Build-Depends: build-essential, hardening-wrapper, python-dev, libsqlite3-dev
+Depends: openssl, tor, torgeoip
