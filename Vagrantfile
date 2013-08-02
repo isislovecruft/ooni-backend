@@ -111,12 +111,12 @@ Vagrant.configure("2") do |config|
 end
 
 $setup_script = <<SCRIPT
-apt-get -y install curl python-setuptools python-dev
+apt-get -y install python-setuptools python-dev
 
 echo "Updating to the latest version of PIP"
 cd /tmp/
 
-curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python ./get-pip.py  ## pip (>=1.3.0) is recommended for security reasons
 
 sudo update-alternatives --install /usr/bin/pip pip /usr/local/bin/pip 0
